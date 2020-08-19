@@ -6,8 +6,8 @@
 //
 //
 
-#import "CDVWKWebViewEngine.h"
+#import "CDVWebViewEngine.h"
 
-@interface CDVWKWebViewEngine (FileXhrFix)
+@interface CDVWebViewEngine (FileXhrFix)
 
 @end
