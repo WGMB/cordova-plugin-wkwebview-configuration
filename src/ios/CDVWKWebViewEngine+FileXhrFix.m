@@ -9,7 +9,7 @@
 #import "CDVWKWebViewEngine+FileXhrFix.h"
 #import <objc/runtime.h>
 
-@implementation CDVWKWebViewEngine (FileXhrFix)
+@implementation CDVWebViewEngine (FileXhrFix)
 + (void)load {
     SEL selector = NSSelectorFromString(@"createConfigurationFromSettings:");
     Method originalMethod = class_getInstanceMethod([CDVWKWebViewEngine class], selector);
