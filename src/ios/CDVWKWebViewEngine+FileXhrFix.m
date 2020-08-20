@@ -8,11 +8,12 @@
 
 #import "CDVWKWebViewEngine+FileXhrFix.h"
 #import <objc/runtime.h>
+#import <Cordova/CDVWebViewEngine.h>
 
 @implementation CDVWebViewEngine (FileXhrFix)
 + (void)load {
     SEL selector = NSSelectorFromString(@"createConfigurationFromSettings:");
-    Method originalMethod = class_getInstanceMethod([CDVWKWebViewEngine class], selector);
+    Method originalMethod = class_getInstanceMethod([CDVWebViewEngine class], selector);
     IMP originalImp = method_getImplementation(originalMethod);
     typedef WKWebViewConfiguration* (*send_type)(id, SEL , NSDictionary*);
     send_type originalImpSend = (send_type)originalImp;
