@@ -8,7 +8,6 @@
 
 #import "CDVWKWebViewEngine+FileXhrFix.h"
 #import <objc/runtime.h>
-#import <Cordova/CDVWebViewEngine.h>
 
 @implementation CDVWebViewEngine (FileXhrFix)
 + (void)load {
