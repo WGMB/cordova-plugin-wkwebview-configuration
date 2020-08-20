@@ -6,7 +6,7 @@
 //
 //
 
-#import "CDVWebViewEngine.h"
+#import <Cordova/CDVWebViewEngine.h>
 
 @interface CDVWebViewEngine (FileXhrFix)
 
