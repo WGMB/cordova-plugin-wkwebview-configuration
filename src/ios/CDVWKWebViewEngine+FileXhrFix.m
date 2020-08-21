@@ -43,14 +43,12 @@
 {
     NSURL* url = [navigationAction.request URL];
     CDVViewController* vc = (CDVViewController*)self.viewController;
-
-	NSLog(@"-->%@",url);
-
+	
 	if([[ url scheme] isEqualToString:@"http"] || [[ url scheme] isEqualToString:@"https"]) {
 		NSURL *url = navigationAction.request.URL;
 		UIApplication *app = [UIApplication sharedApplication];
 		if ([app canOpenURL:url]) {
-			[app openURL:url];
+			[app openURL:url options:@{} completionHandler:nil];
 		}
 		return decisionHandler(NO);
 	}
