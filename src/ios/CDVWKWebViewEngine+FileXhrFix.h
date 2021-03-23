@@ -6,8 +6,11 @@
 //
 //
 
-#import <Cordova/CDVWebViewEngine.h>
+#if __has_include("../../../CordovaLib/Classes/Private/Plugins/CDVWebViewEngine/CDVWebViewEngine.h")
+#define EXIST_CDVWEBVIEWENGINE
+#import "../../../CordovaLib/Classes/Private/Plugins/CDVWebViewEngine/CDVWebViewEngine.h"
 
 @interface CDVWebViewEngine (FileXhrFix)
 
 @end
+#endif
